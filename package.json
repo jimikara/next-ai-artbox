@@ -10,14 +10,16 @@
   },
   "dependencies": {
     "api": "^6.1.1",
+    "classnames": "^2.5.1",
     "form-data": "^4.0.0",
     "monsterapi": "^0.0.3",
-    "next": "14.1.0",
+    "next": "14.1.1",
     "node-cache": "^5.1.2",
     "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.2",
+    "unsplash-js": "^7.0.19"
   },
   "devDependencies": {
     "@types/node": "^20",

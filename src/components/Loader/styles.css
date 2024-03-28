@@ -1,0 +1,17 @@
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0) rotate(45deg);
+  }
+  50% {
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

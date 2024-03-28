@@ -1,18 +1,22 @@
 import Header from "@/components/Header";
 import Frame from "@/components/Frame";
 import ArtistOptions from "@/components/ArtistOptions";
-import Container from "@/components/Container";
+import Controls from "@/components/Controls";
+import ImageProvider from "@/components/ImageProvider";
+import { createPortal } from "react-dom";
+import Toast from "@/components/Toast";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <main className='p-2'>
+    <div className='w-screen h-dvh lg:min-h-[940px] relative bg-white bg-[url("/assets/bg-shape.svg")] before:content-[""] before:block before:w-full before:h-full before:bg-white before:absolute before:top-0 before:opacity-60'>
+      <Header className='z-20 relative' />
+      <main className='z-20 relative'>
         <div className='flex flex-col items-center justify-center'>
-          <Container>
-            <Frame />
-            <ArtistOptions />
-          </Container>
+          <ImageProvider>
+            <Frame className='md:mt-[60px]' />
+            <Controls />
+            <Toast />
+          </ImageProvider>
         </div>
       </main>
     </div>

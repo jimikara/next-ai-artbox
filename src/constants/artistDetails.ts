@@ -80,7 +80,7 @@ export const artistDetails = [
     ]
   },
   {
-    aristName: "Banksy",
+    artistName: "Banksy",
     imageURL: "/assets/banksy.jpeg",
     altText: "A painting by Banksy",
     prompts: [
