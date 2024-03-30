@@ -2,9 +2,10 @@
 
 import sharp from 'sharp'
 import { createApi } from 'unsplash-js';
+import type { GenerationResponse, TextPrompt } from '@/types';
 
 
-export async function generateImage(prompts, imageFormData) {
+export async function generateImage(prompts: TextPrompt[], imageFormData) {
   const engineId = 'stable-diffusion-v1-6'
   const apiHost = process.env.API_HOST ?? 'https://api.stability.ai'
   const apiKey = process.env.NEXT_STABILITY_API_KEY
