@@ -54,8 +54,7 @@ const ArtistOptions = ({ className, closeModal, isModalView }) => {
     try {
       image = await generateImage(prompts, formData); // TODO: handle errors
     } catch (error) {
-      const e = JSON.parse(error.message); // TODO: fix naming on server
-      setError(e.message);
+      setError(error.message);
       setLoading(false);
       return;
     }

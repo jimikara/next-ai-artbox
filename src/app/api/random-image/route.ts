@@ -19,6 +19,6 @@ export const GET = async (req, res) => {
     return NextResponse.json({ imageURL });
   } catch (error) {
     console.error("Error occured ", error);
-    return NextResponse.json({ Message: "Failed", status: 500 });
+    return NextResponse.json("Error", { Message: "Failed", status: 500 });
   }
 };

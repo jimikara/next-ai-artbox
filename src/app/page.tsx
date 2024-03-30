@@ -4,7 +4,7 @@ import ArtistOptions from "@/components/ArtistOptions";
 import Controls from "@/components/Controls";
 import ImageProvider from "@/components/ImageProvider";
 import { createPortal } from "react-dom";
-import Toast from "@/components/Toast";
+import Wrapper from "@/components/Wrapper";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           <ImageProvider>
             <Frame className='md:mt-[60px]' />
             <Controls />
-            <Toast />
+            <Wrapper />
           </ImageProvider>
         </div>
       </main>

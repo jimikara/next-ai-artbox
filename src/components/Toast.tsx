@@ -31,27 +31,22 @@ const Toast = ({ message, closeToast }) => {
 
   const { error, setError } = useContext(ImageContext);
 
-  return createPortal(
-    <>
-      {error && (
-        <div className={containerClasses}>
-          <div className={messageClasses}>
-            {error}
-            <span className='absolute top-2 right-2'>
-              <CloseButton
-                size={24}
-                fillColor='[&_path]:fill-palette-error-800'
-                strokeColor='[&_circle]:fill-palette-error-100'
-                hoverFillColor='[&_path]:hover:fill-palette-error-100'
-                hoverStrokeColor='[&_circle]:hover:fill-palette-error-700'
-                onClick={() => setError(null)}
-              />
-            </span>
-          </div>
-        </div>
-      )}
-    </>,
-    document.body
+  return (
+    <div className={containerClasses}>
+      <div className={messageClasses}>
+        {error}
+        <span className='absolute top-2 right-2'>
+          <CloseButton
+            size={24}
+            fillColor='[&_path]:fill-palette-error-800'
+            strokeColor='[&_circle]:fill-palette-error-100'
+            hoverFillColor='[&_path]:hover:fill-palette-error-100'
+            hoverStrokeColor='[&_circle]:hover:fill-palette-error-700'
+            onClick={() => setError(null)}
+          />
+        </span>
+      </div>
+    </div>
   );
 };
 
