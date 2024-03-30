@@ -13,7 +13,7 @@ export type TextPrompt = {
   weight: number;
 }
 
-interface GenerationResponse {
+export interface GenerationResponse {
   artifacts: Array<{
     base64: string
     seed: number
