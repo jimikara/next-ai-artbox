@@ -12,7 +12,7 @@ import type { Config } from "tailwindcss";
 import config from "tailwind.config.ts";
 import classNames from "classnames";
 
-const fullConfig = resolveConfig(config as unknown as Config);
+const fullConfig = resolveConfig(config as Config);
 
 const Controls = () => {
   const { generatedImage, initialImage } = useContext(ImageContext);
@@ -36,21 +36,9 @@ const Controls = () => {
     "mt-4",
     "shadow-xl",
     "w-full",
-    "border-palette-blue-600",
-    "hover:border-palette-blue-900",
-    "hover:bg-palette-blue-100",
     "lg:last-of-type:ml-2",
-    "lg:first-of-type:mr-2",
-    {
-      "border-palette-blue-300 hover:border-palette-blue-300":
-        !Boolean(initialImage),
-    }
+    "lg:first-of-type:mr-2"
   );
-
-  const downloadButtonClasses = classNames(buttonClasses, {
-    "border-palette-blue-300 hover:border-palette-blue-300":
-      !Boolean(initialImage) || !Boolean(generatedImage),
-  });
 
   return (
     <div className={containerClasses}>
@@ -71,7 +59,7 @@ const Controls = () => {
         />
       </>
       <DownloadButton
-        className={downloadButtonClasses}
+        className={buttonClasses}
         isDisabled={!Boolean(generatedImage)}
       />
 
