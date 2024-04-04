@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useContext, useState } from "react";
 import { ImageContext } from "@/components/ImageProvider";
 import { generateImage } from "@/app/actions";
@@ -8,6 +7,7 @@ import { artistDetails } from "@/constants/artistDetails";
 import type { ImageContextType, TextPrompt } from "@/types";
 import classNames from "classnames";
 import { getErrorMessage } from "@/utils/error";
+import OptionImage from "@/components/OptionImage";
 
 interface IArtistOptionsProps {
   className?: string;
@@ -80,13 +80,7 @@ const ArtistOptions = ({ className, closeModal }: IArtistOptionsProps) => {
             role='button'
             onClick={() => handleClick(option.prompts)}
           >
-            <Image
-              src={option.imageURL}
-              width='90'
-              height='90'
-              alt={option.altText}
-              priority={true}
-            ></Image>
+            <OptionImage image={option.imageURL} alt={option.altText} />
             <div className='font-semibold mt-1'>{option.artistName}</div>
           </div>
         );
