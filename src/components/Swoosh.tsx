@@ -10,6 +10,7 @@ const Swoosh = ({ className }: ISwooshProps) => (
     width={92}
     height={32}
     fill='none'
+    className={className}
     viewBox='0 0 92 32'
   >
     <g filter='url(#a)'>

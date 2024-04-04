@@ -13,7 +13,7 @@ export default function Home() {
       <main className='z-20 relative'>
         <div className='flex flex-col items-center justify-center'>
           <ImageProvider>
-            <Frame className='md:mt-[60px]' />
+            <Frame className='' />
             <Controls />
             <Wrapper />
           </ImageProvider>

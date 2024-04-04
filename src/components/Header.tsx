@@ -1,6 +1,4 @@
 import classnames from "classnames";
-// import { fingerPaint } from "@/utils/fonts";
-import BrushStroke from "@/components/BrushStroke";
 
 interface IHeaderProps {
   className?: string;
@@ -12,10 +10,9 @@ const Header = ({ className }: IHeaderProps) => {
   return (
     <header className={headerClasses}>
       <div className='relative flex justify-center'>
-        <h1 className='text-2xl lg:text-3xl absolute top-8 text-white'>
+        <h1 className='text-2xl lg:text-4xl top-8 text-black bg-white/50 p-3'>
           AI Artbox
         </h1>
-        <BrushStroke className='w-[380px] fill-palette-blue-800' />
       </div>
     </header>
   );

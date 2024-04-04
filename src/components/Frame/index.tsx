@@ -85,8 +85,8 @@ const Frame = ({ className }: IFrameProps) => {
     "h-[360px]",
     "md:w-[400px]",
     "md:h-[400px]",
-    "lg:w-[480px]",
-    "lg:h-[480px]",
+    "2xl:w-[480px]",
+    "2xl:h-[480px]",
     "bg-white",
     "relative",
     className
@@ -102,10 +102,10 @@ const Frame = ({ className }: IFrameProps) => {
     "md:h-[242px]",
     "md:top-[79px]",
     "md:left-[79px]",
-    "lg:w-[264px]",
-    "lg:h-[264px]",
-    "lg:left-[108px]",
-    "lg:top-[108px]",
+    "2xl:w-[264px]",
+    "2xl:h-[264px]",
+    "2xl:left-[108px]",
+    "2xl:top-[108px]",
     "grid",
     "place-content-center"
   );
@@ -134,7 +134,7 @@ const Frame = ({ className }: IFrameProps) => {
             />
             <div className='flex p-3'>
               <Swoosh className='w-[60px] scale-x-[-1]' />
-              <div className='mx-2 flex items-center'>OR</div>
+              <div className='mx-2 flex items-center'>Or</div>
               <Swoosh className='w-[60px]' />
             </div>
             <Button className='shadow-lg' onClick={handleClick}>
