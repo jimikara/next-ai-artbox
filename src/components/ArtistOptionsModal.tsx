@@ -33,7 +33,7 @@ const ArtistOptionsModal = ({ onClose }: IArtistOptionsModalProps) => {
     "lg:rounded-xl",
     "lg:left-[50%]",
     "lg:translate-x-[-50%]",
-    "lg:top-[-80px]",
+    "lg:top-[-30px]",
     "animate-fadeIn"
   );
 

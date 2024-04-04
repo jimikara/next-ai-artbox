@@ -85,6 +85,7 @@ const ArtistOptions = ({ className, closeModal }: IArtistOptionsProps) => {
               width='90'
               height='90'
               alt={option.altText}
+              priority
             ></Image>
             <div className='font-semibold mt-1'>{option.artistName}</div>
           </div>
