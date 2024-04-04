@@ -29,7 +29,8 @@ const Controls = () => {
     "flex-col",
     "lg:flex-row",
     "relative",
-    "mt-10"
+    "mt-10",
+    "whitespace-nowrap"
   );
 
   const buttonClasses = classNames(
