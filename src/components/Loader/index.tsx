@@ -71,7 +71,7 @@ const Loader = ({ text = "Loading" }) => {
       ref={containerRef}
       className='loader-is-this w-full h-full bg-white grid place-content-center bg-white-600 absolute z-30'
     >
-      <p className='bg-white p-3 z-10'>
+      <p className='bg-white/70 p-3 z-10'>
         {text}
         {dots}
       </p>

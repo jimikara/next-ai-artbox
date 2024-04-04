@@ -38,7 +38,6 @@ const ArtistOptions = ({ className, closeModal }: IArtistOptionsProps) => {
     "lg:grid-rows-1"
   );
   const optionClasses = classNames(
-    // "bg-palette-yellow-500 p-2 rounded-lg text-center transition-colors duration-200 shadow-lg w-[100px] flex flex-col justify-center items-center justify-self-end"
     "bg-palette-yellow-500",
     "hover:bg-palette-blue-500/60",
     "p-2",
