@@ -4,9 +4,8 @@ import { useContext } from "react";
 import { ImageContext } from "@/components/ImageProvider";
 import CloseButton from "@/components/CloseButton";
 import classNames from "classnames";
-import { createPortal } from "react-dom";
 
-const Toast = ({ message, closeToast }) => {
+const Toast = () => {
   const containerClasses = classNames(
     "fixed",
     "bottom-5",

@@ -6,31 +6,31 @@ export const artistDetails = [
     prompts: [
       {
         text: "The 1925 painting 'The Garden' by Joan Miro",
-        weight: 1
+        weight: '1'
       },
       {
         text: "The painting 'Melancholic' by Joan Miro",
-        weight: 1
+        weight: '1'
       },
       {
         text: "abstract",
-        weight: 0.5
+        weight: '0.5'
       },
       {
         text: "surrealism",
-        weight: 0.5
+        weight: '0.5'
       },
       {
         text: 'painting',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'colorful',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'photo-realistic',
-        weight: -1  
+        weight: '-1'  
       },
     ]
   },
@@ -41,19 +41,19 @@ export const artistDetails = [
     prompts: [
       {
         text: "The 1937 painting 'Weeping Woman', by Pablo Picasso",
-        weight: 1
+        weight: '1'
       },
       {
         text: 'photo-realistic',
-        weight: -1
+        weight: '-1'
       },
       {
         text: 'painting',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'cubism',
-        weight: 0.4
+        weight: '0.4'
       }
     ],
   },
@@ -63,19 +63,19 @@ export const artistDetails = [
     altText: "A painting by Frida Kahlo",
     prompts: [
       { text: "A painting by Frida Kahlo",
-        weight: 1
+        weight: '1'
       },
       {
         text: 'photo-realistic',
-        weight: -1
+        weight: '-1'
       },
       {
         text: 'painting',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'colorful',
-        weight: 0.2
+        weight: '0.2'
       }
     ]
   },
@@ -86,31 +86,31 @@ export const artistDetails = [
     prompts: [
       {
         text: "A painting by Banksy",
-        weight: 1
+        weight: '1'
       },
       {
         text: 'photo-realistic',
-        weight: -1
+        weight: '-1'
       },
       {
         text: 'stencil',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'graffiti',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'political',
-        weight: 0.2
+        weight: '0.2'
       },
       { 
         text: 'black and white',
-        weight: 0.3
+        weight: '0.3'
       },
       { 
         text: 'small colored details',
-        weight: 0.3
+        weight: '0.3'
       }
     ]
   },
@@ -119,23 +119,23 @@ export const artistDetails = [
     prompts: [
       {
         text: "The 1889 painting 'Starry Night' by Vincent Van Gogh",
-        weight: 1
+        weight: '1'
       },
       {
         text: 'photo-realistic',
-        weight: -1
+        weight: '-1'
       },
       {
         text: 'painting',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'colorful',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'impressionism',
-        weight: 0.2
+        weight: '0.2'
       }
     ],
     imageURL: "/assets/van-gogh.jpeg",
@@ -148,23 +148,23 @@ export const artistDetails = [
     prompts: [
       {
         text: "The 1905 painting 'The Green Stripe' by Henri Matisse",
-        weight: 1
+        weight: '1'
       },
       {
         text: 'photo-realistic',
-        weight: -1
+        weight: '-1'
       },
       {
         text: 'painting',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'colorful',
-        weight: 0.2
+        weight: '0.2'
       },
       {
         text: 'fauvism',
-        weight: 0.2
+        weight: '0.2'
       }
     ]
   },

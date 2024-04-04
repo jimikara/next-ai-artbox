@@ -1,6 +1,21 @@
 import classnames from "classnames";
+import { robotoMono } from "@/utils/fonts";
 
-const Button = (props) => {
+interface IButtonProps {
+  children: React.ReactNode;
+  className?: string;
+  fullWidth?: boolean;
+  isDisabled?: boolean;
+  onClick?: () => void;
+}
+
+const Button = ({
+  children,
+  className,
+  fullWidth,
+  isDisabled,
+  onClick,
+}: IButtonProps) => {
   const buttonClasses = classnames(
     "border-2",
     "border-palette-brown-500",
@@ -10,27 +25,24 @@ const Button = (props) => {
     "rounded-md",
     "transition-colors",
     "text-nowrap",
-    props.className,
+    "font-semibold",
+    robotoMono.className,
+    className,
     {
-      "w-full": props.fullWidth,
+      "w-full": fullWidth,
     },
     {
-      "cursor-not-allowed text-gray-300 border-palette-brown-300":
-        props.isDisabled,
+      "cursor-not-allowed text-gray-300 border-palette-brown-300": isDisabled,
     },
     {
       "cursor-pointer hover:bg-palette-brown-200 hover:border-palette-brown-900":
-        !props.isDisabled,
+        !isDisabled,
     }
   );
 
   return (
-    <button
-      className={buttonClasses}
-      disabled={props.isDisabled}
-      onClick={props.onClick}
-    >
-      {props.children}
+    <button className={buttonClasses} disabled={isDisabled} onClick={onClick}>
+      {children}
     </button>
   );
 };

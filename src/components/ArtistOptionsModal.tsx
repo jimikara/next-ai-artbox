@@ -2,7 +2,11 @@ import ArtistOptions from "@/components/ArtistOptions";
 import CloseButton from "@/components/CloseButton";
 import classNames from "classnames";
 
-const ArtistOptionsModal = ({ onClose }) => {
+interface IArtistOptionsModalProps {
+  onClose: () => void;
+}
+
+const ArtistOptionsModal = ({ onClose }: IArtistOptionsModalProps) => {
   const containerClasses = classNames(
     "w-screen",
     "h-dvh",

@@ -7,16 +7,15 @@ import ResetButton from "@/components/ResetButton";
 import DownloadButton from "@/components/DownloadButton";
 import ArtistOptionsModal from "@/components/ArtistOptionsModal";
 import Button from "@/components/Button";
-import Toast from "@/components/Toast";
 import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "/tailwind.config.ts";
+import type { Config } from "tailwindcss";
+import config from "tailwind.config.ts";
 import classNames from "classnames";
 
-const fullConfig = resolveConfig(tailwindConfig);
+const fullConfig = resolveConfig(config as unknown as Config);
 
 const Controls = () => {
-  const { generatedImage, initialImage, error, setError } =
-    useContext(ImageContext);
+  const { generatedImage, initialImage } = useContext(ImageContext);
   const [showModal, setShowModal] = useState(false);
 
   const containerClasses = classNames(

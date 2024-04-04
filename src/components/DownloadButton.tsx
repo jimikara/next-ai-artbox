@@ -4,7 +4,12 @@ import { useContext } from "react";
 import { ImageContext } from "@/components/ImageProvider";
 import Button from "@/components/Button";
 
-const DownloadButton = ({ className, isDisabled }) => {
+interface IDownloadButtonProps {
+  className?: string;
+  isDisabled?: boolean;
+}
+
+const DownloadButton = ({ className, isDisabled }: IDownloadButtonProps) => {
   const { generatedImage } = useContext(ImageContext);
 
   // const combineImages = (bitmapImage, svgImage) => {

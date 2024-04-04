@@ -1,15 +1,28 @@
 "use client";
 
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 import type { ImageContextType } from "@/types";
 
-export const ImageContext = createContext<ImageContextType | null>(null);
+export const ImageContext = createContext<ImageContextType>({
+  initialImage: null,
+  setInitialImage: () => {},
+  generatedImage: null,
+  setGeneratedImage: () => {},
+  loading: false,
+  setLoading: () => {},
+  error: null,
+  setError: () => {},
+});
 
-const ImageProvider = ({ children }) => {
-  const [initialImage, setInitialImage] = useState<string | null>(null);
+interface IImageProviderProps {
+  children: React.ReactNode;
+}
+
+const ImageProvider = ({ children }: IImageProviderProps) => {
+  const [initialImage, setInitialImage] = useState<Blob | null>(null);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   return (
     <ImageContext.Provider

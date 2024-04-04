@@ -6,11 +6,15 @@ import { ImageContext } from "@/components/ImageProvider";
 import { generateImage } from "@/app/actions";
 import { artistDetails } from "@/constants/artistDetails";
 import type { ImageContextType, TextPrompt } from "@/types";
-import Toast from "@/components/Toast";
 import classNames from "classnames";
-import CloseButton from "@/components/CloseButton";
+import { getErrorMessage } from "@/utils/error";
 
-const ArtistOptions = ({ className, closeModal, isModalView }) => {
+interface IArtistOptionsProps {
+  className?: string;
+  closeModal?: () => void;
+}
+
+const ArtistOptions = ({ className, closeModal }: IArtistOptionsProps) => {
   const {
     initialImage,
     setGeneratedImage,
@@ -18,7 +22,7 @@ const ArtistOptions = ({ className, closeModal, isModalView }) => {
     setLoading,
     error,
     setError,
-  } = useContext(ImageContext);
+  } = useContext<ImageContextType>(ImageContext);
 
   const containerClasses = classNames(
     className,
@@ -48,13 +52,14 @@ const ArtistOptions = ({ className, closeModal, isModalView }) => {
       closeModal();
     }
 
-    const formData = new FormData();
+    const formData: FormData = new FormData();
     formData.append("init_image", initialImage);
 
     try {
-      image = await generateImage(prompts, formData); // TODO: handle errors
-    } catch (error) {
-      setError(error.message);
+      image = await generateImage(prompts, formData);
+    } catch (error: unknown) {
+      const message = getErrorMessage(error);
+      setError(message);
       setLoading(false);
       return;
     }
@@ -73,7 +78,6 @@ const ArtistOptions = ({ className, closeModal, isModalView }) => {
               index % 2 === 0 ? "justify-self-end" : "justify-self-start"
             }`}
             role='button'
-            disabled={!initialImage || loading}
             onClick={() => handleClick(option.prompts)}
           >
             <Image

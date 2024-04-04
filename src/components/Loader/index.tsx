@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, ReactElement } from "react";
 import "./styles.css";
 
-const generateSquares = (width) => {
+const generateSquares = (width: number): ReactElement[] => {
   return Array.from({ length: 80 }).map((_, index) => {
     const size = Math.floor(Math.random() * 5) + 4;
     const top = Math.floor(Math.random() * width);
@@ -31,7 +31,7 @@ const generateSquares = (width) => {
   });
 };
 
-const generateDots = (width) => {
+const generateDots = (width: number): ReactElement[] => {
   return Array.from({ length: 3 }).map((_, index) => {
     return (
       <span
@@ -49,18 +49,20 @@ const generateDots = (width) => {
 };
 
 const Loader = ({ text = "Loading" }) => {
-  const [squares, setSquares] = useState([]);
-  const [dots, setDots] = useState([]);
+  const [squares, setSquares] = useState<ReactElement[] | []>([]);
+  const [dots, setDots] = useState<ReactElement[] | []>([]);
   const containerRef = useRef(null);
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
-    const { offsetWidth, offsetHeight } = containerRef.current;
+    if (!containerRef.current) return;
+    const { offsetWidth } = containerRef.current;
     setWidth(offsetWidth);
   }, []);
 
   useEffect(() => {
-    setSquares(generateSquares(width));
+    const squares = generateSquares(width);
+    setSquares(squares);
     setDots(generateDots(width));
   }, [width]);
 

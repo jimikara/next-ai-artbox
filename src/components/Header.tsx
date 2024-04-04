@@ -2,13 +2,12 @@ import classnames from "classnames";
 // import { fingerPaint } from "@/utils/fonts";
 import BrushStroke from "@/components/BrushStroke";
 
-const Header = ({ className }) => {
-  const headerClasses = classnames(
-    "p-4",
-    "text-center",
-    // fingerPaint.className,
-    className
-  );
+interface IHeaderProps {
+  className?: string;
+}
+
+const Header = ({ className }: IHeaderProps) => {
+  const headerClasses = classnames("p-4", "text-center", className);
 
   return (
     <header className={headerClasses}>

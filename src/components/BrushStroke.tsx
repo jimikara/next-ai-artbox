@@ -1,13 +1,16 @@
 import * as React from "react";
 import classNames from "classnames";
 
-const BrushStroke = (props) => {
-  const brushStrokeClasses = classNames(props.className);
+interface IBrushStrokeProps {
+  className?: string;
+}
+
+const BrushStroke = ({ className }: IBrushStrokeProps) => {
+  const brushStrokeClasses = classNames(className);
 
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      {...props}
       viewBox='0 0 1300 361.693'
       className={brushStrokeClasses}
     >

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useContext, useState, useEffect } from "react";
 import FrameSVG from "./svg";
 import Image from "next/image";
@@ -9,8 +10,13 @@ import Swoosh from "@/components/Swoosh";
 import { ImageContext } from "@/components/ImageProvider";
 import type { ImageContextType } from "@/types";
 import classNames from "classnames";
+import { robotoMono } from "@/utils/fonts";
 
-const Frame = ({ className }) => {
+interface IFrameProps {
+  className?: string;
+}
+
+const Frame = ({ className }: IFrameProps) => {
   const {
     generatedImage,
     initialImage,
@@ -19,13 +25,19 @@ const Frame = ({ className }) => {
     setLoading,
     setError,
     error,
-  } = useContext(ImageContext);
+  } = useContext<ImageContextType>(ImageContext);
 
-  const handleFileChange = async (e) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoading(true);
 
-    const file = e.target.files[0];
+    const file = e.target.files?.[0];
     const formData = new FormData();
+
+    if (!file) {
+      setError("No files received.");
+      setLoading(false);
+      return;
+    }
 
     formData.append("imageFile", file);
 
@@ -47,6 +59,7 @@ const Frame = ({ className }) => {
 
   const handleClick = async () => {
     setLoading(true);
+    setError(null);
 
     const response = await fetch("/api/random-image");
 
@@ -63,7 +76,7 @@ const Frame = ({ className }) => {
     setLoading(false);
   };
 
-  const base64ToDataUrl = (base64) => {
+  const base64ToDataUrl = (base64: string) => {
     return `data:image/png;base64,${base64}`;
   };
 
@@ -108,7 +121,7 @@ const Frame = ({ className }) => {
           <div className='flex flex-col'>
             <label
               htmlFor='uploadFile'
-              className='text-center border-2 border-palette-brown-500 bg-white px-3 py-2 rounded-md cursor-pointer shadow-lg hover:bg-palette-brown-200 hover:border-palette-brown-900 transition-colors'
+              className={`text-center border-2 border-palette-brown-500 bg-white px-3 py-2 rounded-md cursor-pointer shadow-lg hover:bg-palette-brown-200 hover:border-palette-brown-900 transition-colors font-semibold ${robotoMono.className}`}
             >
               Choose Image
             </label>

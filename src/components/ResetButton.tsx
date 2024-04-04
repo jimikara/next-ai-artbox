@@ -4,7 +4,12 @@ import { useContext } from "react";
 import { ImageContext } from "@/components/ImageProvider";
 import Button from "@/components/Button";
 
-const ResetButton = ({ className, fullWidth, isDisabled }) => {
+interface IResetButtonProps {
+  className?: string;
+  isDisabled?: boolean;
+}
+
+const ResetButton = ({ className, isDisabled }: IResetButtonProps) => {
   const { setGeneratedImage, setInitialImage } = useContext(ImageContext);
 
   const reset = () => {

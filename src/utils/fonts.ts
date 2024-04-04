@@ -1,4 +1,4 @@
-import { Inter, Finger_Paint, Roboto_Mono } from "next/font/google";
+import { Finger_Paint, Roboto_Mono } from "next/font/google";
 
 export const fingerPaint = Finger_Paint({
   subsets: ["latin"],

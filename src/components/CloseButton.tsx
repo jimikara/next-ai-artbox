@@ -3,6 +3,16 @@
 import { useState } from "react";
 import classnames from "classnames";
 
+interface ICloseButtonProps {
+  fillColor?: string;
+  strokeColor?: string;
+  hoverFillColor?: string;
+  hoverStrokeColor?: string;
+  onClick: () => void;
+  size?: number;
+  className?: string;
+}
+
 const CloseButton = ({
   fillColor = "[&_path]:fill-slate-600",
   strokeColor = "[&_circle]:fill-white",
@@ -11,7 +21,7 @@ const CloseButton = ({
   onClick,
   size,
   className,
-}) => {
+}: ICloseButtonProps) => {
   const svgClasses = classnames(
     "cursor-pointer",
     fillColor,

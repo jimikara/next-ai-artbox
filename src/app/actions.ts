@@ -1,11 +1,9 @@
 'use server'
 
-import sharp from 'sharp'
-import { createApi } from 'unsplash-js';
 import type { GenerationResponse, TextPrompt } from '@/types';
 
 
-export async function generateImage(prompts: TextPrompt[], imageFormData) {
+export async function generateImage(prompts: TextPrompt[], imageFormData: FormData) {
   const engineId = 'stable-diffusion-v1-6'
   const apiHost = process.env.API_HOST ?? 'https://api.stability.ai'
   const apiKey = process.env.NEXT_STABILITY_API_KEY
@@ -13,10 +11,12 @@ export async function generateImage(prompts: TextPrompt[], imageFormData) {
   if (!apiKey) throw new Error('Missing Stability API key.')
 
   imageFormData.append('init_image_mode', 'IMAGE_STRENGTH')
-  imageFormData.append('image_strength', .4)
-  imageFormData.append('cfg_scale', 17.5)
-  imageFormData.append('samples', 1)
-  imageFormData.append('steps', 30)
+  imageFormData.append('image_strength', '.4')
+  imageFormData.append('cfg_scale', '17.5')
+  imageFormData.append('samples', '1')
+  imageFormData.append('steps', '30')
+
+  console.log('Prompts:', prompts)
 
   prompts.forEach((prompt, index) => {
     imageFormData.append(`text_prompts[${index}][text]`, prompt.text)

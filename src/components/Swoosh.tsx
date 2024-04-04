@@ -1,11 +1,15 @@
 import * as React from "react";
-const Swoosh = (props) => (
+
+interface ISwooshProps {
+  className?: string;
+}
+
+const Swoosh = ({ className }: ISwooshProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width={92}
     height={32}
     fill='none'
-    {...props}
     viewBox='0 0 92 32'
   >
     <g filter='url(#a)'>

@@ -1,11 +1,15 @@
 import * as React from "react";
-const FrameSVG = (props) => (
+
+interface FrameSVGProps {
+  className?: string;
+}
+
+const FrameSVG = ({ className }: FrameSVGProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='100%'
     height='100%'
     fill='none'
-    {...props}
     viewBox='0 0 284 284'
   >
     <mask

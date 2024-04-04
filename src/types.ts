@@ -1,7 +1,14 @@
+import React from "react";  
+
 export type ImageContextType = {
-  initialImage: File | null;
-  // initialImage: string | null;
-  setInitialImage: (image: string) => void;
+  initialImage: Blob | null;
+  setInitialImage: React.Dispatch<React.SetStateAction<Blob | null>>;
+  generatedImage: string | null;
+  setGeneratedImage: React.Dispatch<React.SetStateAction<string | null>>;
+  loading: boolean;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  error: string | null;
+  setError: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
 export type ApiResponse = {
@@ -10,7 +17,7 @@ export type ApiResponse = {
 
 export type TextPrompt = {
   text: string;
-  weight: number;
+  weight: string;
 }
 
 export interface GenerationResponse {
@@ -19,4 +26,8 @@ export interface GenerationResponse {
     seed: number
     finishReason: string
   }>
+}
+export interface ErrorResponse {
+  message: string;
+  status: number;
 }
