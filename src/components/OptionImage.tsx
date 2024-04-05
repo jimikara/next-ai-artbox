@@ -6,9 +6,7 @@ interface IOptionImageProps {
 }
 
 const OptionImage = ({ image, alt }: IOptionImageProps) => {
-  return (
-    <Image src={image} width='90' height='90' alt={alt} priority={true}></Image>
-  );
+  return <Image src={image} width='90' height='90' alt={alt}></Image>;
 };
 
 export default OptionImage;
