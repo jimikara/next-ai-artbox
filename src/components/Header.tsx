@@ -10,7 +10,7 @@ const Header = ({ className }: IHeaderProps) => {
   return (
     <header className={headerClasses}>
       <div className='relative flex justify-center'>
-        <h1 className='text-2xl lg:text-4xl top-8 text-black bg-white/50 p-3'>
+        <h1 className='text-2xl lg:text-4xl top-8 text-black bg-white/50 p-1 md:p-3'>
           AI Artbox
         </h1>
       </div>

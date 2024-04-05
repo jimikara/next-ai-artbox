@@ -16,8 +16,6 @@ export async function generateImage(prompts: TextPrompt[], imageFormData: FormDa
   imageFormData.append('samples', '1')
   imageFormData.append('steps', '30')
 
-  console.log('Prompts:', prompts)
-
   prompts.forEach((prompt, index) => {
     imageFormData.append(`text_prompts[${index}][text]`, prompt.text)
     imageFormData.append(`text_prompts[${index}][weight]`, prompt.weight)

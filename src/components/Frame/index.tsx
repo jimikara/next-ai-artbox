@@ -81,8 +81,8 @@ const Frame = ({ className }: IFrameProps) => {
   };
 
   const containerClasses = classNames(
-    "w-[360px]",
-    "h-[360px]",
+    "w-[340px]",
+    "h-[340px]",
     "md:w-[400px]",
     "md:h-[400px]",
     "2xl:w-[480px]",
@@ -94,10 +94,10 @@ const Frame = ({ className }: IFrameProps) => {
 
   const innerWrapperClasses = classNames(
     "absolute",
-    "w-[228px]",
-    "h-[228px]",
-    "top-[66px]",
-    "left-[66px]",
+    "w-[218px]",
+    "h-[218px]",
+    "top-[61px]",
+    "left-[61px]",
     "md:w-[242px]",
     "md:h-[242px]",
     "md:top-[79px]",
@@ -121,7 +121,7 @@ const Frame = ({ className }: IFrameProps) => {
           <div className='flex flex-col'>
             <label
               htmlFor='uploadFile'
-              className={`text-center border-2 border-palette-brown-500 bg-white px-3 py-2 rounded-md cursor-pointer shadow-lg hover:bg-palette-brown-200 hover:border-palette-brown-900 transition-colors font-semibold ${robotoMono.className}`}
+              className={`text-center border-2 border-palette-brown-500 bg-white px-3 py-2 rounded-md cursor-pointer shadow-lg hover:bg-palette-brown-200 hover:border-palette-brown-900 transition-colors font-semibold`}
             >
               Choose Image
             </label>

@@ -19,17 +19,16 @@ const Controls = () => {
   const [showModal, setShowModal] = useState(false);
 
   const containerClasses = classNames(
-    "w-full",
     "block",
-    "w-[320px]",
+    "w-[340px]",
     "md:w-[400px]",
     "2xl:w-[480px]",
-    "mt-8",
+    "mt-5",
+    "md:mt-8",
     "flex",
     "flex-col",
     "lg:flex-row",
     "relative",
-    "mt-10",
     "whitespace-nowrap"
   );
 

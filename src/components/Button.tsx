@@ -26,7 +26,7 @@ const Button = ({
     "transition-colors",
     "text-nowrap",
     "font-semibold",
-    robotoMono.className,
+    // robotoMono.className,
     className,
     {
       "w-full": fullWidth,

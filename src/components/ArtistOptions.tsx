@@ -94,7 +94,9 @@ const ArtistOptions = ({ className, closeModal }: IArtistOptionsProps) => {
             onClick={() => handleClick(option.prompts)}
           >
             <OptionImage image={option.imageURL} alt={option.altText} />
-            <div className='font-semibold mt-1'>{option.artistName}</div>
+            <div className='font-semibold mt-1 whitespace-nowrap'>
+              {option.artistName}
+            </div>
           </div>
         );
       })}
