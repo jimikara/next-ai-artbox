@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
+import { revalidateTag } from "next/cache";
 import type { ErrorResponse } from "@/types";
 
 export const GET = async (req: NextRequest, res: NextResponse) => {
@@ -7,9 +7,9 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
   const height = 500;
 
   try {   
-    revalidatePath('/')
+    revalidateTag('randomImage')
 
-    const response = await fetch("https://api.unsplash.com/photos/random/?query=portrait&client_id=" + process.env.NEXT_UNSPLASH_API_KEY, { next: { revalidate: 0 } })
+    const response = await fetch("https://api.unsplash.com/photos/random/?query=portrait&client_id=" + process.env.NEXT_UNSPLASH_API_KEY, { next: { tags: ['randomImage'] } })
     const responseJSON = await response.json();
     let imageURL = null;
 
@@ -19,7 +19,7 @@ export const GET = async (req: NextRequest, res: NextResponse) => {
 
     return NextResponse.json({ imageURL });
   } catch (error) {
-    console.error("Error occured ", error);
+    console.error("Error occured ", error); 
     const errorResponse: ErrorResponse = {
       message: "Failed",
       status: 500,
