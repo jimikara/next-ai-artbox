@@ -21,19 +21,20 @@ const ArtistOptionsModal = ({ onClose }: IArtistOptionsModalProps) => {
     "bg-palette-pink-500",
     'bg-[url("/assets/bg-shape-blue.svg")]',
     'before:content-[""]',
+    "before:rounded-xl",
     "before:block",
     "before:w-full",
     "before:h-full",
     "before:bg-white",
     "before:absolute",
     "before:top-0",
-    "before:opacity-40",
+    "before:opacity-20",
     "lg:w-[716px]",
     "lg:h-[164px]",
     "lg:rounded-xl",
     "lg:left-[50%]",
     "lg:translate-x-[-50%]",
-    "lg:top-[-30px]",
+    "lg:top-[-20px]",
     "animate-fadeIn"
   );
 

@@ -19,6 +19,7 @@ const Button = ({
   const buttonClasses = classnames(
     "border-2",
     "border-palette-brown-500",
+    "text-gray-800",
     "bg-white",
     "px-3",
     "py-2",

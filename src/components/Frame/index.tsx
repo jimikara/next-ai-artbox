@@ -89,6 +89,7 @@ const Frame = ({ className }: IFrameProps) => {
     "2xl:h-[480px]",
     "bg-white",
     "relative",
+    "shadow-xl",
     className
   );
 
@@ -121,7 +122,7 @@ const Frame = ({ className }: IFrameProps) => {
           <div className='flex flex-col'>
             <label
               htmlFor='uploadFile'
-              className={`text-center border-2 border-palette-brown-500 bg-white px-3 py-2 rounded-md cursor-pointer shadow-lg hover:bg-palette-brown-200 hover:border-palette-brown-900 transition-colors font-semibold`}
+              className={`text-center text-gray-800 border-2 border-palette-brown-500 bg-white px-3 py-2 rounded-md cursor-pointer shadow-lg hover:bg-palette-brown-200 hover:border-palette-brown-900 transition-colors font-semibold`}
             >
               Choose Image
             </label>
