@@ -7,7 +7,7 @@ import Wrapper from "@/components/Wrapper";
 
 export default function Home() {
   return (
-    <div className='w-screen h-screen overflow-scroll relative bg-palette-blue-500 bg-[url("/assets/bg-shape.svg")] before:content-[""]'>
+    <div className='w-dvh h-dvh overflow-scroll relative bg-palette-blue-500 bg-[url("/assets/bg-shape.svg")] before:content-[""]'>
       <Header className='z-20 relative' />
       <main className='z-20 relative'>
         <div className='flex flex-col items-center justify-center'>
