@@ -19,7 +19,6 @@ const Button = ({
   const buttonClasses = classnames(
     "border-2",
     "border-palette-brown-500",
-    "text-gray-800",
     "bg-white",
     "px-3",
     "py-2",
@@ -36,7 +35,7 @@ const Button = ({
       "cursor-not-allowed text-gray-300 border-palette-brown-300": isDisabled,
     },
     {
-      "cursor-pointer hover:bg-palette-brown-200 hover:border-palette-brown-900":
+      "cursor-pointer hover:bg-palette-brown-200 hover:border-palette-brown-900 text-gray-800":
         !isDisabled,
     }
   );

@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={fingerPaint.className}>{children}</body>
+      <body className={bodyClassNames}>{children}</body>
     </html>
   );
 }

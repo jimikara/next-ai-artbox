@@ -1,3 +1,5 @@
+"use client";
+
 import ArtistOptions from "@/components/ArtistOptions";
 import CloseButton from "@/components/CloseButton";
 import classNames from "classnames";
@@ -9,7 +11,7 @@ interface IArtistOptionsModalProps {
 const ArtistOptionsModal = ({ onClose }: IArtistOptionsModalProps) => {
   const containerClasses = classNames(
     "w-screen",
-    "h-dvh",
+    "h-screen",
     "flex",
     "flex-row",
     "justify-center",
@@ -47,7 +49,7 @@ const ArtistOptionsModal = ({ onClose }: IArtistOptionsModalProps) => {
           onClick={onClose}
         />
       </span>
-      <div className='h-full w-full relative flex flex-row items-center justify-center'>
+      <div className='relative flex flex-row items-center justify-center'>
         <ArtistOptions closeModal={onClose} />
       </div>
     </div>

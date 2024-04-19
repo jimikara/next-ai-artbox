@@ -24,6 +24,7 @@ const Controls = () => {
     "md:w-[400px]",
     "2xl:w-[480px]",
     "mt-5",
+    "pb-[100px]",
     "md:mt-8",
     "flex",
     "flex-col",
