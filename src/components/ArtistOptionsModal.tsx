@@ -10,8 +10,8 @@ interface IArtistOptionsModalProps {
 
 const ArtistOptionsModal = ({ onClose }: IArtistOptionsModalProps) => {
   const containerClasses = classNames(
-    "w-screen",
-    "h-screen",
+    "w-full",
+    "h-full",
     "flex",
     "flex-row",
     "justify-center",
